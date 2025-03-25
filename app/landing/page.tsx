@@ -4,13 +4,9 @@ export default function Landing() {
 	return (
 		<>
 			<Banner
-				props={{
-					img: '/images/banner-landing.jpg',
-					height: '60vh',
-					gradient: true,
-				}}>
-				Landing
-			</Banner>
+				className="h-[60vh]"
+				gradient={true}
+				img="/images/banner-landing.jpg"></Banner>
 		</>
 	);
 }
