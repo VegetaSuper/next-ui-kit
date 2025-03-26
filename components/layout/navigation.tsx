@@ -45,6 +45,7 @@ export function Navigation({ onMenuToggle }: NavigationProps) {
 
 	return (
 		<>
+			{/* 常规导航 */}
 			<ul className="hidden gap-2.5 lg:flex">
 				{list.map((item, index) => {
 					return (
@@ -63,10 +64,10 @@ export function Navigation({ onMenuToggle }: NavigationProps) {
 					);
 				})}
 			</ul>
+
+			{/* 小屏导航栏唤醒按钮 */}
 			<motion.div
 				className="flex flex-col justify-center lg:hidden cursor-pointer w-[22px] h-7 group"
-				// animate={{ marginRight: show ? 300 : 0 }}
-				// transition={{ duration: 0.3 }}
 				onClick={toggleShow}>
 				<motion.span
 					className="bg-white w-full h-[1.5px]"
@@ -92,6 +93,8 @@ export function Navigation({ onMenuToggle }: NavigationProps) {
 					transition={{ duration: 0.3 }}
 				/>
 			</motion.div>
+
+			{/* 小屏导航栏 */}
 			{show &&
 				createPortal(
 					<motion.div
@@ -111,7 +114,7 @@ export function Navigation({ onMenuToggle }: NavigationProps) {
 											prefetch
 											href={item.href}>
 											<Button
-												className="cursor-pointer w-full justify-start gap-2"
+												className="cursor-pointer w-full justify-start gap-2 text-white"
 												variant="ghost"
 												onClick={toggleShow}>
 												{item.icon}

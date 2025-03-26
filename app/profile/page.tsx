@@ -82,7 +82,7 @@ export default function Profile() {
 		<>
 			<Banner
 				className="sm:h-[550px] h-[620px]"
-                img="/images/banner-profile.jpg">
+				img="/images/banner-profile.jpg">
 				<div className="h-full w-full flex flex-col items-center justify-end pb-18 bg-[rgba(0,0,0,.5)]">
 					<Image
 						className="rounded-[50%] w-[123px] h-[123px]"
@@ -189,6 +189,7 @@ export default function Profile() {
 				</div>
 			</section>
 
+			{/* 预览图片 */}
 			<AnimatePresence>
 				{selectedImg && (
 					<>
